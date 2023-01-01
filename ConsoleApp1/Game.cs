@@ -13,6 +13,7 @@ namespace ConsoleApp1
         public Deck Deck = new Deck();
         public Trick[] Tricks = new Trick[13];
         public int Score { get; set; }
+        public int highestEst { get; set; }
         public int team0score { get; set; }
         public int team1score { get; set; }
         public Card.Suit CurrentTarneebSuit { get; set; }
@@ -56,8 +57,32 @@ namespace ConsoleApp1
                     team1score+= Players[i].Score;
                 }
             }
-            Console.WriteLine($"--+ Team0 score is {team0score}");
-            Console.WriteLine($"--+ Team1 score is {team1score}");
+            if (Players[highestEstimatorIndex].Team == 0)
+            {
+                Console.WriteLine($"Highest estimator is of team 0");
+                if(team0score >= highestEst)
+                {
+                    team1score= 0;
+                }
+                else
+                {
+                    team0score = -highestEst;
+                }
+
+            }else if(Players[highestEstimatorIndex].Team == 1)
+            {
+                Console.WriteLine($"Highest estimator is of team 0");
+                if (team1score >= highestEst)
+                {
+                    team0score = 0;
+                }
+                else
+                {
+                    team1score = -highestEst;
+                }
+            }
+            Console.WriteLine(team0score);
+            Console.WriteLine(team1score);
         }
 
         public void CollectEstimates()
@@ -90,6 +115,7 @@ namespace ConsoleApp1
                 CurrentTarneebSuit = Players[3].wantedsuit;
                 highestEstimatorIndex= 3;
             }
+            highestEst = highestEstimate;
             Console.WriteLine($"Highest estimate is {highestEstimate} with the suit of {CurrentTarneebSuit} by {Players[highestEstimatorIndex].Name}");
         }
         public void PlayTricks()

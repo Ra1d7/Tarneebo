@@ -81,8 +81,6 @@ namespace ConsoleApp1
                     team1score = -highestEst;
                 }
             }
-            Console.WriteLine(team0score);
-            Console.WriteLine(team1score);
         }
 
         public void CollectEstimates()

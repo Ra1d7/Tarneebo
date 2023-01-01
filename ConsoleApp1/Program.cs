@@ -10,10 +10,12 @@
             int gamecount = 0;
             while(team0bag <=winningbag && team1bag <=winningbag)
             {
+                gamecount++;
+                Console.WriteLine($"---START--- (Game {gamecount}) ---START---");
                 Game g = new Game();
                 team0bag += g.team0score;
                 team1bag += g.team1score;
-                gamecount++;
+                Console.WriteLine($"---END--- (Game {gamecount}) ----END----");
             }
             Console.WriteLine("-----------------------------++++++++++++++++++++++++-----------------------------");
             Console.WriteLine($"Team0 bag is {team0bag}");

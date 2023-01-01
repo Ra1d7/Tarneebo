@@ -25,4 +25,4 @@ DealCards(): Deals the cards to the players.
 PlayTrick(int trickIndex): Plays a single trick of the game, including determining the winning player and team, updating the scores, and displaying the winning player and team.
 
 ## Running the Program
-To run the program, compile and run the Game class. The program will prompt the players to select the Tarneeb suit, and then play the game until a winner is determined. The program will display the winning team at the end of the game.
+To run the program, compile and run the main method. The program will simulate games each game is made of 13 tricks until a team's score reches the winningbag score which is by default 31.

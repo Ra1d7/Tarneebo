@@ -5,6 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Icons-Land-Metro-Raster-Sport-Casino-Playing-Cards.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Icons-Land-Metro-Raster-Sport-Casino-Playing-Cards.ico" />
+  </ItemGroup>
 
 </Project>

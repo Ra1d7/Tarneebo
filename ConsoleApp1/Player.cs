@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Tarneebo
 {
     internal class Player
     {
@@ -50,7 +50,7 @@ namespace ConsoleApp1
         }
 
 
-        public void CalculateEstimate()
+        public int CalculateEstimate()
         {
             // Determine the suit with the most cards in the player's hand
             int spadesCount = Cards.Count(card => card.CardSuit == Card.Suit.Spades);
@@ -95,6 +95,7 @@ namespace ConsoleApp1
             }
             Console.WriteLine($"{Name} Has Estimated {estimate}");
             Estimate = estimate;
+            return estimate;
         }
     }
 }

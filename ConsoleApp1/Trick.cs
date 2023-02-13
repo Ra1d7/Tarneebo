@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ConsoleApp1.Card;
-using static ConsoleApp1.Game;
+using static Tarneebo.Card;
+using static Tarneebo.Game;
 
-namespace ConsoleApp1
+namespace Tarneebo
 {
     internal class Trick
     {
@@ -32,7 +32,7 @@ namespace ConsoleApp1
                 }
             }
         }
-        public int[] CalcIndex(int startindex)
+        public static int[] CalcIndex(int startindex)
         {
             int[] indexs = new int[4];
             switch (startindex)

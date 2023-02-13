@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+﻿namespace Tarneebo
 {
     internal class Program
     {
@@ -22,6 +22,7 @@
             Console.WriteLine($"Team1 bag is {team1bag}");
             Console.WriteLine($"Total games: {gamecount}");
             Console.WriteLine("-----------------------------++++++++++++++++++++++++-----------------------------");
+            Console.Read();
 
         }
     }
